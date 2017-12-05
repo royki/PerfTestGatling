@@ -1,8 +1,8 @@
-package com.oneA4dev.scenarios
+package com.apis.scenarios
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import com.oneA4dev.util._
+import com.apis.util._
 
 object Catalogues {
 
@@ -27,7 +27,7 @@ object Catalogues {
 									.queryParam("qaAccessToken", Environment.qaAccessToken)
 									.check(status.is(200))
 								)
-								.pause(10)
+								.pause(10)																
 								.exec(http("/catalogues:3/level1")
 								   	.get("/catalogues")
 								   	.queryParam("catalogueId",3)
@@ -35,7 +35,25 @@ object Catalogues {
 									.queryParam("qaAccessToken", Environment.qaAccessToken)
 									.check(status.is(200))
 								)
-								.pause(10)
-															
-  	val getAllCatalogues = scenario("get list of open catalogue").exec(getAllCataloguesHttp)
+								
+	val getAllCatalogues = scenario("get list of open catalogue").exec(getAllCataloguesHttp)
+
+	// val getAllCataloguesAtLevelHttp = exec(http("/catalogues:3/level0")
+	// 							   	.get("/catalogues")
+	// 							   	.queryParam("catalogueId",3)
+	// 							   	.queryParam("filter",level0)
+	// 								.queryParam("qaAccessToken", Environment.qaAccessToken)
+	// 								.check(status.is(200))
+	// 							)
+	// 							.pause(10)																
+	// 							.exec(http("/catalogues:3/level1")
+	// 							   	.get("/catalogues")
+	// 							   	.queryParam("catalogueId",3)
+	// 							   	.queryParam("filter",level1)
+	// 								.queryParam("qaAccessToken", Environment.qaAccessToken)
+	// 								.check(status.is(200))
+	// 							)
+	// 							.pause(10)
+	// val getAllCataloguesAtLevel = scenario("get catalogues at level0 and level1").exec(getAllCataloguesAtLevelHttp)															
+  	
 }

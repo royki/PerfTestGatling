@@ -1,4 +1,4 @@
-Performance test of APIs of 1A4DEV 
+Performance test of APIs using Gatling 
 ==================================
 
 Performance/Stress test of APIs

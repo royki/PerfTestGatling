@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.1a4dev</groupId>
-	<artifactId>1a4dev-api-perf-test</artifactId>
+	<groupId>com.apis</groupId>
+	<artifactId>api-perf-test</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<repositories>
@@ -127,12 +127,12 @@
 						<dataFolder>src/test/resources/data</dataFolder>
 						<bodiesFolder>src/test/resources/bodies</bodiesFolder>
 						-->
-						<simulationsFolder>src/test/scala/com/oneA4dev</simulationsFolder>
+						<simulationsFolder>src/test/scala/com/apis</simulationsFolder>
 						<runMultipleSimulations>true</runMultipleSimulations>
 						<!--
 						<includes>
-							<simulationClass>com.oneA4dev.apis.APIs</simulationClass>
-							<simulationClass>com.oneA4dev.families.familiesInSelfServiceCatalogue</simulationClass>
+							<simulationClass>com.apis.APIs</simulationClass>
+							<simulationClass>com.families.familiesInSelfServiceCatalogue</simulationClass>
 						</includes>
 						-->
 						<resultsFolder>target/gatling/results</resultsFolder>					

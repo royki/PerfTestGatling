@@ -1,4 +1,4 @@
-package com.oneA4dev.simulation
+package com.apis.simulation
 
 
 import io.gatling.core.Predef._
@@ -6,8 +6,8 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration._
 import io.gatling.http.request.builder.HttpRequestBuilder.toActionBuilder
 
-import com.oneA4dev.util._
-import com.oneA4dev.scenarios.{SelfServiceApis, Applications, Analytics, Catalogues}
+import com.apis.util._
+import com.apis.scenarios.{SelfServiceApis, Applications, Analytics, Catalogues}
 
 class SimulationOnApis extends Simulation {
 
@@ -46,10 +46,16 @@ class SimulationOnApis extends Simulation {
       rampUsersPerSec(1) to 100 during(30 seconds) 
     ),
 
+    // /catalogues
     Catalogues.getAllCatalogues.inject(
       atOnceUsers(10),
       rampUsersPerSec(1) to 100 during(30 seconds)
-    )
+    ),
+
+    // Catalogues.getAllCataloguesAtLevel.inject(
+    //   atOnceUsers(10),
+    //   rampUsersPerSec(1) to 100 during(30 seconds)
+    // )
 
   )
   

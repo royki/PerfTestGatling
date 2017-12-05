@@ -1,4 +1,4 @@
-package com.oneA4dev.scenarios
+package com.apis.scenarios
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._

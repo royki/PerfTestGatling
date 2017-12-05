@@ -1,4 +1,4 @@
-package com.oneA4dev.util
+package com.apis.util
 
 import java.util
 
@@ -12,7 +12,7 @@ object Environment {
 	val resource = "/PAD-EAS/api"
 	// api version
 	val apiVersion = ("/v0","/v1")
-	// oneA4dev
+	// url
 	val dev02Url = dev02+resource+apiVersion._2
 	// QaAccessToken
 	val qaAccessToken = """{"prospect": false,"login": "QAPADADMIN","firstName": "QaPadAdmin","lastName" : "Admin","mail" : "qa_pad_admin@amadeus.com","organization" : "PAD-USERS","companyCode" : "1A","permissions": ["ACCESS_CLIENT_DOCUMENTATION"]}"""
