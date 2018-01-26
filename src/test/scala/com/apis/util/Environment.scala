@@ -5,9 +5,9 @@ import java.util
 object Environment {
 	
 	// dev02 url
-	val dev02 = "https://nceaddev02web01.etv.nce.amadeus.net"	
+	val dev02 = URL	
 	// dev04 url
-	val dev04 = "https://nceaddev04web01.etv.nce.amadeus.net"
+	val dev04 = URL
 	// PAD-EAS resource
 	val resource = "/PAD-EAS/api"
 	// api version
@@ -15,7 +15,7 @@ object Environment {
 	// url
 	val dev02Url = dev02+resource+apiVersion._2
 	// QaAccessToken
-	val qaAccessToken = """{"prospect": false,"login": "QAPADADMIN","firstName": "QaPadAdmin","lastName" : "Admin","mail" : "qa_pad_admin@amadeus.com","organization" : "PAD-USERS","companyCode" : "1A","permissions": ["ACCESS_CLIENT_DOCUMENTATION"]}"""
+	val qaAccessToken = """QaAccessToken"""
 	// baseURL
 	val baseURL = scala.util.Properties.envOrElse("baseURL", dev02Url)	
 	// nummber of users
